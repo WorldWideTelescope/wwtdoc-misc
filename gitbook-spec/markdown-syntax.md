@@ -1,8 +1,6 @@
 ---
-description: Summarizes GitBook’s enhanced Markdown syntax
+description: GitBook’s enhanced Markdown syntax.
 ---
-
-# GitBook Enhanced Markdown Syntax
 
 [GitBook] documents are generally expressed in [Markdown] syntax, but GitBook
 implements several extensions that aren’t necessarily documented clearly. This
@@ -20,6 +18,7 @@ search away.
 The enhancements documented here are:
 
 - [The metadata stanza](#metadata-stanza)
+- [Leadoff titles are ignored](#leadoff-titles-are-ignored)
 - [Internal links](#internal-links)
 - [Admonishments](#admonishments)
 - [Code samples](#code-samples)
@@ -49,6 +48,18 @@ The only key that I know about is the one shown above, `description`. It
 provides a short description of the page that will be shown at its top.
 
 
+## Leadoff titles are ignored
+
+If you begin your document with a heading à la
+
+```
+# This is my title
+```
+
+it will be ignored. The title displayed at the top of each page comes from the
+[SUMMARY.md](./repo-structure.md#summary-md) file.
+
+
 ## Internal Links
 
 To make an internal link, make a link beginning with `./` and pointing to
@@ -74,6 +85,9 @@ like so:
 This gets rendered as:
 
 {% page-ref page="../index.md" %}
+
+Once again, the file path is relative to the current Markdown file’s location
+in the Git repository.
 
 
 ## Admonishments
@@ -244,6 +258,11 @@ and using the following markup:
 This will get rendered like this:
 
 {% file src="sample-downloadable-file.txt" %}
+
+As with other internal links, the path to the file in question is relative to
+that of the Markdown file currently being processed in the repository. In this
+case, the file’s location relative to the repository root is
+[gitbook-spec/sample-downloadable-file.txt](https://github.com/WorldWideTelescope/wwtdoc-misc/blob/master/gitbook-spec/sample-downloadable-file.txt).
 
 
 ## Web API Method Styling

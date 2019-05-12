@@ -1,4 +1,6 @@
-# Repository Structure
+---
+description: The file structure for WWT GitBook documentation repositories.
+---
 
 [WWT] [GitBook] documentation repositories should contain at least the four
 following files at the top level:
