@@ -11,4 +11,6 @@ repository collects those items.
 [GitBook]: https://docs.gitbook.com/
 
 You should never link directly to this top-level page — just link to the
-specific chapter of interest.
+specific document of interest. These documents are, in no particular order:
+
+- [GitBook Markdown Format Specification](./gitbook-spec.md)
