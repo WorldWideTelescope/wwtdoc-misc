@@ -17,6 +17,19 @@ general Markdown help, there are dozens of tutorials and cheat sheets a web
 search away.
 {% endhint %}
 
+The enhancements documented here are:
+
+- [The metadata stanza](#metadata-stanza)
+- [Internal links](#internal-links)
+- [Admonishments](#admonishments)
+- [Code samples](#code-samples)
+- [Generic tab boxes](#generic-tab-boxes)
+- [Display math](#display-math)
+- [Checklists](#checklists)
+- [Downloadable files](#downloadable-files)
+- [Web API method styling](#web-api-method-styling)
+- [Explicit HTML is ignored](#explicit-html-is-ignored)
+
 
 ## Metadata Stanza
 
@@ -36,6 +49,33 @@ The only key that I know about is the one shown above, `description`. It
 provides a short description of the page that will be shown at its top.
 
 
+## Internal Links
+
+To make an internal link, make a link beginning with `./` and pointing to
+the name of a Markdown file in the repository. Paths are relative to the
+current document; for instance, to link to the previous page, I can write:
+
+```
+[a link like this](./repo-structure.md)
+```
+
+(which generates [a link like this](./repo-structure.md)), rather than having
+the link text be `./gitbook-spec/repo-structure.md`.
+
+Other forms might work, but I haven’t tried!
+
+You can also write a page reference that is called out fairly aggressively
+like so:
+
+```
+{% page-ref page="index.md" %}
+```
+
+This gets rendered as:
+
+{% page-ref page="index.md" %}
+
+
 ## Admonishments
 
 You can include “admonishment” paragraphs that are called out in a special
@@ -47,10 +87,22 @@ This is an informational admonishment.
 {% endhint %}
 ```
 
-The important styles are `info` and `danger`. Here’s an info admonishment:
+The styles are `info`, `success`, `warning`, and `danger`. Here’s an info admonishment:
 
 {% hint style="info" %}
 This is an informational admonishment.
+{% endhint %}
+
+And here’s `success`:
+
+{% hint style="success" %}
+Good job, you did it!
+{% endhint %}
+
+And here’s `warning`:
+
+{% hint style="warning" %}
+Something might go wrong.
 {% endhint %}
 
 And here’s `danger`:
@@ -58,9 +110,6 @@ And here’s `danger`:
 {% hint style="danger" %}
 Danger Zone!
 {% endhint %}
-
-There are also `tip` and `working`, but last I checked, they gave the same
-results as `info`.
 
 
 ## Code Samples
@@ -155,17 +204,46 @@ double dollas as you would in a LaTeX document:
 
 ```
 $$
-e^{2 \pi i} + 1 = 0
+e^{\pi i} + 1 = 0
 $$
 ```
 
 Becomes:
 
 $$
-e^{2 \pi i} + 1 = 0
+e^{\pi i} + 1 = 0
 $$
 
 Nice!
+
+
+## Checklists
+
+You can make checklists in the same way as on GitHub:
+
+```
+- [x] Completed item.
+- [ ] This item has not been completed.
+```
+
+Which gets rendered as:
+
+- [x] Completed item.
+- [ ] This item has not been completed.
+
+
+## Downloadable Files
+
+You can include a link to downloadable file by adding it to your repository
+and using the following markup:
+
+```
+{% file src="gitbook-spec/sample-downloadable-file.txt" %}
+```
+
+This will get rendered like this:
+
+{% file src="gitbook-spec/sample-downloadable-file.txt" %}
 
 
 ## Web API Method Styling
@@ -189,8 +267,8 @@ Method description.
 {% endapi-method-description %}
 
 {% api-method-spec %}
-Specification of the method. There is a lot of additional markup here that
-I have not documented since I don't think we'll be using this construct.
+(A lot of additional markup goes here, but I have not documented it since
+I don't think we'll be using this construct.)
 {% endapi-method-spec %}
 {% endapi-method %}
 ```
@@ -207,13 +285,13 @@ Method description.
 {% endapi-method-description %}
 
 {% api-method-spec %}
-Specification of the method. There is a lot of additional markup here that
-I have not documented since I don't think we'll be using this construct.
+(A lot of additional markup goes here, but I have not documented it since
+I don't think we'll be using this construct.)
 {% endapi-method-spec %}
 {% endapi-method %}
 
 
-## HTML
+## Explicit HTML is Ignored
 
 According to
 [the relevant GitBook docs](https://docs.gitbook.com/integrations/github/limitations#html),
