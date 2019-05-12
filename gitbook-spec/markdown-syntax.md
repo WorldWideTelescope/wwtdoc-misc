@@ -28,6 +28,7 @@ The enhancements documented here are:
 - [Downloadable files](#downloadable-files)
 - [Web API method styling](#web-api-method-styling)
 - [Explicit HTML is ignored](#explicit-html-is-ignored)
+- [Definition lists are not available](#definition-lists-are-not-available)
 
 
 ## Metadata Stanza
@@ -315,3 +316,18 @@ I don't think we'll be using this construct.)
 According to
 [the relevant GitBook docs](https://docs.gitbook.com/integrations/github/limitations#html),
 arbitrary HTML content in your Markdown will not be honored.
+
+
+## Definition Lists are Not Available
+
+Unfortunately, there seems to be no mechanism to express a [definition list],
+also known as a “description list”. Try a table instead:
+
+```
+| Name | Description |
+| :-- |
+| First | This is the first. |
+| Second | This is the second. |
+```
+
+[definition list]: https://developer.mozilla.org/en-US/docs/Web/HTML/Element/dl
