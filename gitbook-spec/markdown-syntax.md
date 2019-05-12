@@ -68,12 +68,12 @@ You can also write a page reference that is called out fairly aggressively
 like so:
 
 ```
-{% page-ref page="index.md" %}
+{% page-ref page="../index.md" %}
 ```
 
 This gets rendered as:
 
-{% page-ref page="index.md" %}
+{% page-ref page="../index.md" %}
 
 
 ## Admonishments
@@ -238,12 +238,12 @@ You can include a link to downloadable file by adding it to your repository
 and using the following markup:
 
 ```
-{% file src="gitbook-spec/sample-downloadable-file.txt" %}
+{% file src="sample-downloadable-file.txt" %}
 ```
 
 This will get rendered like this:
 
-{% file src="gitbook-spec/sample-downloadable-file.txt" %}
+{% file src="sample-downloadable-file.txt" %}
 
 
 ## Web API Method Styling
