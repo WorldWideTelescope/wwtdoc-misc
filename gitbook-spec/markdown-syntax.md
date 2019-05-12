@@ -47,17 +47,10 @@ This is an informational admonishment.
 {% endhint %}
 ```
 
-The allowed styles are `info`, `tip`, `danger`, and `working`. Here’s an info
-admonishment:
+The important styles are `info` and `danger`. Here’s an info admonishment:
 
 {% hint style="info" %}
 This is an informational admonishment.
-{% endhint %}
-
-And here’s `tip`:
-
-{% hint style="tip" %}
-This is an tip.
 {% endhint %}
 
 And here’s `danger`:
@@ -66,27 +59,60 @@ And here’s `danger`:
 Danger Zone!
 {% endhint %}
 
-And here’s `working`:
-
-{% hint style="working" %}
-Did they mean “warning”?
-{% endhint %}
+There are also `tip` and `working`, but last I checked, they gave the same
+results as `info`.
 
 
 ## Code Samples
 
-Standard Markdown code blocks, delimited in triple backticks, work just fine.
-They get styled like this:
+Standard Markdown
+[fenced code blocks](https://help.github.com/en/articles/creating-and-highlighting-code-blocks),
+delimited in triple backticks, work just fine. They get styled like this:
 
 ```python
 print('Python sample')
 ```
 
-You can use a language tag to tell GitBook to apply syntax highlighting for a
-particular language; above, I used the word `python` immediately after the
-opening backticks.
+You can use a
+[language identifier](https://help.github.com/en/articles/creating-and-highlighting-code-blocks#syntax-highlighting)
+to tell GitBook to apply syntax highlighting for a particular language; above,
+I used the word `python` immediately after the opening backticks.
 
-*Document rest here*
+But you can also use an extended syntax that lets you show example code
+associated with a specific filename, and multiple tabs that the viewer can
+choose between. The syntax is:
+
+    {% code-tabs %}
+    {% code-tabs-item title="myfile.py" %}
+    ```python
+    print('Here is a nice Python code block.')
+    ```
+    {% endcode-tabs-item %}
+    {% code-tabs-item title="myfile.js" %}
+    ```js
+    console.log('Here is some JavaScript.');
+    ```
+    {% endcode-tabs-item %}
+    {% endcode-tabs %}
+
+This gets rendered as:
+
+{% code-tabs %}
+{% code-tabs-item title="myfile.py" %}
+```python
+print('Here is a nice Python code block.')
+```
+{% endcode-tabs-item %}
+{% code-tabs-item title="myfile.js" %}
+```js
+console.log('Here is some JavaScript.');
+```
+{% endcode-tabs-item %}
+{% endcode-tabs %}
+
+We do *not* recommend using the “tabs” feature, however, since it can be
+confusing if people don’t realize that there are different pieces of code
+associated with the different tabs.
 
 
 ## HTML
