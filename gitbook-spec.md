@@ -1,5 +1,5 @@
 ---
-description: Meta-documentation: how to write WWT documents for GitBook.
+description: "Meta-documentation: how to write WWT documents for GitBook."
 ---
 
 WWT uses [GitBook] to render and host most of its documentation. The way we

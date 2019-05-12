@@ -77,3 +77,6 @@ Here’s a template, showing WWT’s recommended file structure:
 
 * [Yet another page](another-page.md)
 ```
+
+The titles that you use in this file will be the ones shown at the top of each
+respective page.
