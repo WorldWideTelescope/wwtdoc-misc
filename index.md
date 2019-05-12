@@ -9,3 +9,6 @@ repository collects those items.
 [AAS]: https://aas.org/
 [WorldWide Telescope]: http://www.worldwidetelescope.org/
 [GitBook]: https://docs.gitbook.com/
+
+You should never link directly to this top-level page — just link to the
+specific chapter of interest.
