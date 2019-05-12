@@ -115,6 +115,104 @@ confusing if people don’t realize that there are different pieces of code
 associated with the different tabs.
 
 
+## Generic Tab Boxes
+
+You can create generic boxes with tabbed content that the viewer can choose
+between:
+
+```
+{% tabs %}
+{% tab title="First Tab" %}
+Here is first tab content.
+{% endtab %}
+
+{% tab title="Second Tab" %}
+Here is second tab content.
+{% endtab %}
+{% endtabs %}
+```
+
+Which gets rendered as:
+
+{% tabs %}
+{% tab title="First Tab" %}
+Here is first tab content.
+{% endtab %}
+
+{% tab title="Second Tab" %}
+Here is second tab content.
+{% endtab %}
+{% endtabs %}
+
+Again, however, we do not recommend using this feature since it can be
+confusing.
+
+
+## Display Math
+
+GitBook supports display equations compiled with LaTeX! Just encase them in
+double dollas as you would in a LaTeX document:
+
+```
+$$
+e^{2 \pi i} + 1 = 0
+$$
+```
+
+Becomes:
+
+$$
+e^{2 \pi i} + 1 = 0
+$$
+
+Nice!
+
+
+## Web API Method Styling
+
+GitBook provides a fairly elaborate framework for document Web API methods.
+The interactive entry form is documented
+[here](https://docs.gitbook.com/content-editing/rich-content#api-methods).
+However, the structured used here is highly tuned towards modern web APIs that
+are unlike WWT’s, so we don’t expect the special syntax to be very useful in
+the WWT context. For reference, here is *a subset* of the special tags used in
+the Markdown representation of this construct:
+
+```
+{% api-method method="get" host="https://api.example.com" path="/urlpath/:param" %}
+{% api-method-summary %}
+method-name
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Method description.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+Specification of the method. There is a lot of additional markup here that
+I have not documented since I don't think we'll be using this construct.
+{% endapi-method-spec %}
+{% endapi-method %}
+```
+
+Which results in:
+
+{% api-method method="get" host="https://api.example.com" path="/urlpath/:param" %}
+{% api-method-summary %}
+method-name
+{% endapi-method-summary %}
+
+{% api-method-description %}
+Method description.
+{% endapi-method-description %}
+
+{% api-method-spec %}
+Specification of the method. There is a lot of additional markup here that
+I have not documented since I don't think we'll be using this construct.
+{% endapi-method-spec %}
+{% endapi-method %}
+
+
 ## HTML
 
 According to
