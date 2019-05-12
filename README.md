@@ -2,7 +2,7 @@
 
 This repository contains the source code for the
 [WorldWide Telescope Miscellaneous Documentation]. The `master` branch of this
-repo is rendered by [GitBook](https://docs.gitbook.com/) to appear here:
+repo is rendered by [GitBook] to appear here:
 
 https://worldwidetelescope.gitbook.io/miscellaneous/
 
@@ -17,9 +17,11 @@ standard [fork-and-pull] model.
 [WWT Code of Conduct]: https://worldwidetelescope.github.io/code-of-conduct/
 [fork-and-pull]: https://help.github.com/en/articles/about-collaborative-development-models
 
-The file structure in this repository follows the format described in the
-[GitBook documentation on their GitHub integration](https://docs.gitbook.com/integrations/github).
-Documentation files are in [MarkDown](https://www.markdownguide.org/) format.
-The file [index.md](./index.md) contains the landing page for the
-documentation, while the file [SUMMARY.md](./SUMMARY.md) uses a special
-structure to specify the table of contents for this documentation.
+The files in this repository follow the structure described in the
+[WWT GitBook Markdown documentation specification]. The content is
+fundamentally in [Markdown] format, but there are special patterns and extra
+features used by [GitBook].
+
+[GitBook]: https://docs.gitbook.com/
+[WWT GitBook Markdown documentation specification]: https://worldwidetelescope.gitbook.io/miscellaneous/documents/gitbook-spec
+[Markdown]: https://commonmark.org/
