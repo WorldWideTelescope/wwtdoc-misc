@@ -80,3 +80,10 @@ Here’s a template, showing WWT’s recommended file structure:
 
 The titles that you use in this file will be the ones shown at the top of each
 respective page.
+
+Also note that “page group” names will enter into your URLs. For instance, the
+[“miscellaneous documenation”](https://github.com/WorldWideTelescope/wwtdoc-misc/)
+repository that contains this specification
+[groups documents under a “Documents” group](https://github.com/WorldWideTelescope/wwtdoc-misc/blob/master/SUMMARY.md),
+so that the URL to this page is
+<https://worldwidetelescope.gitbook.io/miscellaneous/documents/gitbook-spec/repo-structure>.
