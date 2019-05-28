@@ -55,7 +55,9 @@ Once the space has been created, there are a few setup steps:
    not Git*Book*.
 3. Once the GitHub integration is turned on, re-open that panel and turn on
    “Display the Button”.
-4. In the “Customization” settings (the icon is a paint roller), go to “Pages”
+4. In the “Google Analytics” integration pane, enter the WWT tracking ID:
+   UA-107473046-3.
+5. In the “Customization” settings (the icon is a paint roller), go to “Pages”
    and turn off the “Page Rating” feature. We don’t want to ask people to
    provide information that we’re going to ignore, and at this juncture it is
    extremely implausible that we’re going to look at that rating information.
