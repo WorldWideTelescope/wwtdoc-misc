@@ -128,21 +128,21 @@ As an example next step, here is how you would build the webclient frontend
 in one of these VMs.
 
 1. Open up Git Bash and change to a directory where you’ll keep your code
-   checkouts. I generally use `$HOME/sw`.
-2. Clone the webclient: `git clone
-   https://github.com/WorldWideTelescope/wwt-web-client.git`. If you’ve set up
-   SSH keys, you should be able to clone using a `git@github.com` SSH URL
+   checkouts. Something like `C:\WWT` is convenient.
+2. Clone the webclient: `git clone https://github.com/WorldWideTelescope/wwt-web-client`.
+   If you’ve set up SSH keys, you should be able to clone using a `git@github.com` SSH URL
    instead.
 3. Open up Visual Studio.
 4. Select File → Open → Project/Solution, navigate to your checkout directory,
    and open up `WebClientOnly.sln`.
 5. After you do so, Visual Studio will spin for a bit as it downloads [npm] modules
-   and does other kinds of setup.
+   and does other kinds of setup. Wait until it has finished.
 6. Use `Ctrl-Shift-B` to build all of the projects in the solution. (There’s
-   only one project in this particular example, though.) It should spin and succeed!
+   only one project in this particular example, though.) It should work for a
+   little while then report success!
 
 Once you’ve reached this point, you can use Git Bash for your usual version
 control workflow and Visual Studio to build and test-run changes as needed.
-Welcome to WWT development!
+Welcome to WWT Windows development!
 
 [npm]: https://www.npmjs.com/
