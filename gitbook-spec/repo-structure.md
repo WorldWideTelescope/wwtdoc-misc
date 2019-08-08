@@ -82,7 +82,7 @@ The titles that you use in this file will be the ones shown at the top of each
 respective page.
 
 Also note that “page group” names will enter into your URLs. For instance, the
-[“miscellaneous documenation”](https://github.com/WorldWideTelescope/wwtdoc-misc/)
+[“miscellaneous documentation”](https://github.com/WorldWideTelescope/wwtdoc-misc/)
 repository that contains this specification
 [groups documents under a “Documents” group](https://github.com/WorldWideTelescope/wwtdoc-misc/blob/master/SUMMARY.md),
 so that the URL to this page is
