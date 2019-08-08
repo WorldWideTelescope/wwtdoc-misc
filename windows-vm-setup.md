@@ -78,10 +78,17 @@ This is the most annoying part.
    [Atom](https://atom.io/) is a large install can seriously hamper your
    ability to fit everything you need in the 40 GiB drive allocated to the VM.
 5. The “Git Bash” tool, combining Git with a bash shell and core utilities, is
-   also extremely helpful. Download and install it from
-   <https://git-scm.com/download/win> — note that it is just referred to as
-   “Git”, not “Git Bash”. Default options are generally OK, but you’ll
-   probably want to select Notepad++ as your text editor.
+   also extremely helpful.
+   1. Download and install it from <https://git-scm.com/download/win> — note
+      that it is just referred to as “Git”, not “Git Bash”.
+   2. Default options are generally OK, but you’ll probably want to select
+      Notepad++ as your text editor.
+   3. Start Git Bash via the “Type here to search” box.
+   4. Right-click the icon of the running program and choose to pin it to your
+      taskbar.
+   5. In the bash window, run `git config --global user.name "Your Name"`
+      (substituting appropriately, of course).
+   6. Also run `git config --global user.email your@email`
 6. Now, the big one: Visual Studio.
    1. Search for “visual studio install older version” and find the result
       that seems most on-point.
@@ -91,3 +98,51 @@ This is the most annoying part.
    4. Choose a Custom install.
    5. Click through the component selection — it should just be the “Web
       developer” tools and nothing else extra.
+   6. Start the install. It will take a long time.
+   7. When the install is complete, reboot the VM. Sometimes this is necessary
+      to apply updates pulled in by Visual Studio; failing to reboot can break
+      the VM’s dev tools stack!
+   8. Check for updates again and install/reboot as needed.
+   9. Start Visual Studio and sign in to your Microsoft account.
+   10. Pin it to your taskbar.
+   11. Go to Tools → Extensions and Updates and start installing the available
+       Visual Studio updates. These may be large downloads that require that
+       you exit Visual Studio.
+7. In the “Power & Sleep” section of the Windows settings tool, set the screen
+   to never turn off, either on battery or when plugged in. (In the VM, it
+   seems that sometimes it's not possible to awaken the screen again if it
+   turns off this way.)
+8. Other setup you may wish to perform:
+   - Install personal SSH keys ­ you will need some way to transfer files
+     between your host machine and the VM. On my machine, the IP address of
+     the host machine *as seen from the VM* is `10.0.2.2`, and I can `scp`
+     between the two once I start up the SSH server on the host machine.
+   - Correct the VM's timezone if it's wrong (right-click on the taskbar
+     clock).
+
+
+# Example: build the webclient frontend
+
+Once you’ve performed the above steps, you should be all set up for WWT work!
+As an example next step, here is how you would build the webclient frontend
+in one of these VMs.
+
+1. Open up Git Bash and change to a directory where you’ll keep your code
+   checkouts. I generally use `$HOME/sw`.
+2. Clone the webclient: `git clone
+   https://github.com/WorldWideTelescope/wwt-web-client.git`. If you’ve set up
+   SSH keys, you should be able to clone using a `git@github.com` SSH URL
+   instead.
+3. Open up Visual Studio.
+4. Select File → Open → Project/Solution, navigate to your checkout directory,
+   and open up `WebClientOnly.sln`.
+5. After you do so, Visual Studio will spin for a bit as it downloads [npm] modules
+   and does other kinds of setup.
+6. Use `Ctrl-Shift-B` to build all of the projects in the solution. (There’s
+   only one project in this particular example, though.) It should spin and succeed!
+
+Once you’ve reached this point, you can use Git Bash for your usual version
+control workflow and Visual Studio to build and test-run changes as needed.
+Welcome to WWT development!
+
+[npm]: https://www.npmjs.com/
