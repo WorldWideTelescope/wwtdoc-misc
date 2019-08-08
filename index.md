@@ -14,3 +14,4 @@ You should never link directly to this top-level page — just link to the
 specific document of interest. These documents are, in no particular order:
 
 - [GitBook Markdown Format Specification](./gitbook-spec.md)
+- [Setting up a Windows VM for WWT Development](./windows-vm-setup.md)
